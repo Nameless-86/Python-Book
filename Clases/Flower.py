@@ -30,10 +30,12 @@ class flower():
 
     def __str__(self):
         return f"{self._name} is a flower with {self._petals} petals and it costs ${self._price}."
-    
-#########################################
-testFlower = flower("Rose", 5, 12.60)
-print(testFlower)
-testFlower.set_name("Jazmin")
-print(testFlower.get_name())
 
+
+#########################################
+if __name__ == "__main__":
+
+    testFlower = flower("Rose", 5, 12.60)
+    print(testFlower)
+    testFlower.set_name("Jazmin")
+    print(testFlower.get_name())

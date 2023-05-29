@@ -1,5 +1,6 @@
-x = 1
-for i in range(4):
-    x += x*i
+asd = ""
+def funct (letter):
+    asd.join(letter)
+    return asd
 
-    print(x)
+print(funct("J"))
