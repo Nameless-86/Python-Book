@@ -30,8 +30,8 @@ class CaesarCipher():
 
 
 if __name__ == '__main__':
-    cypher = CaesarCipher(3)
-    message = "THIS SHIT ONLY WORKS IN UPPERCASE"
+    cypher = CaesarCipher(13)
+    message = "HELLO"
     coded = cypher.encrypt(message)
     print("Secret: ", coded)
     answer = cypher.decrypt(coded)

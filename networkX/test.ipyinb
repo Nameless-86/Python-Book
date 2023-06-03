@@ -1,0 +1,10 @@
+import networkx as nx
+import matplotlib.pyplot as plt
+
+
+#####Tipos de grafos
+
+G = nx.Graph()          #Grafo simple
+D = nx.digraph()        #Grafo dirigido
+M = nx.MultiGraph()     #Multi Grafo 
+MD = nx.MultiDiGraph()  #Multi Grafo dirigido
