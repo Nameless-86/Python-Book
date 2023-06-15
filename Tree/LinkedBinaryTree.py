@@ -75,7 +75,7 @@ class LinkedBinaryTree(BinaryTree):
         node = self._validate(p)
         return self._make_position(node._right)
 
-    def num_childer(self, p):
+    def num_children(self, p):
         """Return the number of children of postion p"""
         node = self._validate(p)
         count = 0
@@ -84,3 +84,41 @@ class LinkedBinaryTree(BinaryTree):
         if node._right is not None:  # right child exist
             count += 1
         return count
+
+    def _add_root(self, e):
+        """
+        Place element e at the root of an empty tree and return new Position
+        Raise ValueError if tree is nonempty
+        """
+
+        if self._root is not None:
+            raise ValueError("Root exists")
+        self._size = 1
+        self._root = self._Node(e)
+        return self._make_position(self._root)
+
+    def _add_left(self, p, e):
+        """
+        Create a new left child for position p, storing element e
+        Return position of new node
+        Raise value error if position p is invalid or p has already a left child
+        """
+        node = self._validate(p)
+        if node._left is not None:
+            raise ValueError("left child exists")
+        self._size += 1
+        node._left = self._Node(e)
+        return self._make_position(node._left)
+
+    def _add_right(self, p, e):
+        """
+        Create a new right child for position p, storing element e
+        Return position of new node
+        Raise value error if position p is invalid or p has already a right child
+        """
+        node = self._validate(p)
+        if node._right is not None:
+            raise ValueError("Right child exists")
+        self._size += 1
+        node._right = self._Node(e)
+        return self._make_position(node._right)

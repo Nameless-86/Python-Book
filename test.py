@@ -1,6 +1,8 @@
-asd = ""
-def funct (letter):
-    asd.join(letter)
-    return asd
-
-print(funct("J"))
+asd = {
+    1: False,
+    2: False,
+    3: False,
+}
+print(asd)
+asd[1] = True
+print(asd)

@@ -12,4 +12,4 @@ def binary_search(data, target, low, high):
             return binary_search(data, target, low, mid -1)
         else:
             #Recur on the portion right of the middle
-            return binary_search(data, target, low, mid+1)
+            return binary_search(data, target, mid+1, high)
